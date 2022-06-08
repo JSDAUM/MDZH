@@ -1,0 +1,40 @@
+package LEE;
+
+{$R *.RES}
+{$R '..\..\panel\NewTest\Bianco_Panel.dcr'}
+{$R '..\..\Compornent\Ad3dcal.dcr'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$DESCRIPTION 'LEE'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl40,
+  VCLSMP40;
+
+contains
+  NumEdit in '..\..\Edit\Numedit.pas',
+  Bianco_Panel in '..\..\panel\NewTest\Bianco_Panel.pas',
+  Advgrid,
+  Ad3dcal in '..\..\Compornent\Ad3dcal.pas';
+
+end.

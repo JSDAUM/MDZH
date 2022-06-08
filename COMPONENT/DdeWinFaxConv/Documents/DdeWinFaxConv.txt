@@ -1,0 +1,210 @@
+==================
+DdeWinFaxConv v1.0
+==================
+Copyright 1997 Benjamin Wiersum
+
+
+File ............... WFDDE10.ZIP
+Version ............ 1.0
+Description ........ Delphi component for sending faxes with
+                     Symantec WinFax PRO v8
+Development Tool ... Borland Delphi 2, 3
+Author ............. Ben Wiersum
+Email .............. bwiersum@concentric.net
+WWW ................ http://www.concentric.net/~bwiersum
+Distribution ....... Freeware
+
+========
+CONTENTS
+========
+	- Included Files
+	- Installation
+	- General Directions
+	- TDdeWinFaxConv
+		Hierarchy
+		Properties
+		Methods
+	- Sample application
+	- Disclaimer
+
+==============
+Included Files
+==============
+DdeWinFaxConv.pas ....... Component source code
+DdeWinFaxConv.dcr ....... Delphi component resource file
+DdeWinFaxConv.txt ....... Component documentation (this file)
+Sample\testWFConv.dpr ... Sample project
+Sample\testWFConv.res ... Sample project resource file
+Sample\mainFrm.dfm ...... Sample project main form
+Sample\mainFrm.pas ...... Sample project main form source
+
+============
+Installation
+============
+Unzip DdeWinFaxConv.pas and DdeWinFaxConv.res into a directory.
+
+DELPHI 2:
+	- Choose Component|Install...
+	- Click the "Add..." button.
+	- In the "Module name:" edit box enter the path to 
+	  DdeWinFaxConv.pas (use the "Browse" button).
+	- Click on OK.
+
+DELPHI 3:
+	- Choose Component|Install Component.
+	- In the "Unit file name" edit box, enter the path to
+	  DdeWinFaxConv.pas (use the "Browse" button).
+	- Click on OK.
+
+==================
+General Directions
+==================
+DdeWinFaxConv handles the DDE communication between a Delphi
+application and WinFax PRO v8.  With DdeWinFaxConv, a developer
+can tell WinFax where to send a fax without the user being 
+asked to provide a number or select a number from a WinFax 
+phone book.
+
+To send a fax:
+	1.)  Start the WinFax PRO Controller.
+	     (The WinFax PRO setup adds it to StartUp)
+
+	2.)  Place a DdeWinFaxConv component on a Form or 
+	     DataWindow.
+
+	3.)  Call the TDdeWinFaxConv.SetWinFaxLink method.
+
+	4.)  Enter DdeWinFaxConv's SendFaxParams (see Properties).
+
+	5.)  Call the TDdeWinFaxConv.Execute method.
+
+	6.)  Repeat steps 4 & 5 to send to multiple recipients.
+
+	7.)  Send a print job to the WinFax printer driver.
+
+DdeWinFaxConv can also add dialing prefixes and long distance 
+dialing prefixes.  See the component Properties for more details.
+
+By default, WinFax will preview a fax before sending it.  To 
+disable this option:
+	1.) Open WinFax PRO
+	2.) Choose Setup|Send...
+	3.) Uncheck "Allow me to preview and annotate faxes"
+
+There are other WinFax DDE features not covered by DdeWinFaxConv.
+For more information on WinFax DDE commands, see the WinFax PRO 
+online help.
+
+==============
+TDdeWinFaxConv
+==============
+---------
+Hierarchy
+---------
+	TObject
+	  |
+	TPersistent
+	  |
+	TComponent
+	  |
+	TDdeClientConv
+	  |
+	TDdeWinFaxConv
+
+-------------------------------------
+Properties (unique to TDdeWinFaxConv)
+-------------------------------------
+DialAsEntered: boolean
+	TRUE:  Does not attempt to alter the number entered 
+	       in the SendFaxParams.
+	FALSE: Allows changes to the number based on values
+	       entered in the DialPrefix, LongDistancePrefix, 
+	       and LocalAreaCode properties.
+
+DialPrefix: string
+	Digits to dial before a phone number (ie "9," or "*70").
+	DialAsEntered must be set to FALSE.
+
+LongDistancePrefix:string
+	Digits to dial before a long distance number (ie "1").
+	DialAsEntered must be set to FALSE.	
+
+RemoveLocalAreaCode: boolean
+	TRUE:  If the area code is included in a local number
+	       the area code digits are removed before sending
+	       the number to WinFax.
+	       DialAsEntered must be set to FALSE.
+	FALSE: Does not check for local area code
+
+LocalAreaCode: string
+	The local area code that the RemoveLocalAreaCode feature
+	looks for.
+	RemoveLocalAreaCode must be set to TRUE.
+	DialAsEntered must be set to FALSE.
+
+IncludeSendDateTime: boolean
+	TRUE:  Sends the DateTime information included in the
+	       SendFaxParams.
+	FALSE: Does not send the DateTime info.
+
+SendFaxParams: TSendFaxParams
+	The SendFaxParams are the list of parameters for WinFax's 
+	"recipient" DDE command.
+	- PhoneNumber: string
+	- SendDateTime: TDateTime
+	- RecipientName: string
+	- RecipientCompany: string
+	- Subject: string
+	- Keywords: string
+	- BillingCode: string
+	- BftFax: string
+	  ***Must be either "BFT" or "Fax"
+
+----------------------------------
+Methods (unique to TDdeWinFaxConv)
+----------------------------------
+Execute: Sends the SendFaxParams to WinFax.  This must be
+         done before Printing.  To send a fax to multiple 
+         recipients, repeat modifying the SendFaxParams and
+         calling Execute before Printing.
+
+SetWinFaxLink: Initialize the WinFax PRO DDE connection.  
+               Must be called before Execute.  Note the 
+               WinFax PRO controller must be running.
+               Returns TRUE if successful.
+
+==================
+Sample Application
+==================
+The easiest way to get familiar with DdeWinFaxConv features is 
+to experiment with it using the included sample application.
+
+Note: The WinFax printer driver must be set as default and the 
+WinFax Controller (normally in StartUp folder) must be running.
+
+==========
+Disclaimer
+==========
+- DdeWinFaxConv is provided 'as is' to use at your own risk.
+
+- DdeWinFaxConv is not guaranteed to be bug free or functional.
+
+- DdeWinFaxConv can be distributed freely, only if all the original
+  files are included and no other files are added.
+
+- DdeWinFaxConv can be used freely for private or commercial use.
+
+- Spelling errors in this documentation are due to Notepad's
+  lack of a spell checker.
+
+
+If you have comments, suggestions, or added features, send email 
+to bwiersum@concentric.net.
+
+For information on WinFax PRO, visit Symantec at:
+http://www.symantec.com
+
+WinFax PRO is a registered trademark of Symantec Corporation.
+
+Symantec did not develop DdeWinFaxConv and therefore is not
+responsible for supporting it or acknowledging its existence.

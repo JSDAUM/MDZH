@@ -1,0 +1,233 @@
+unit SQN200U7_P1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, jpeg;
+
+type
+  TSQN200F7_P1 = class(TForm)
+    QuickRep1: TQuickRep;
+    PageHeaderBand1: TQRBand;
+    QRImage1: TQRImage;
+    QRLabel42: TQRLabel;
+    QRShape30: TQRShape;
+    QRLabel19: TQRLabel;
+    qrlb_Admdate: TQRLabel;
+    qrlb_patName: TQRLabel;
+    qrlb_Patno: TQRLabel;
+    qrlb_Sex: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRSubDetail1: TQRSubDetail;
+    QRMemo1: TQRMemo;
+    QRBand1: TQRBand;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel11: TQRLabel;
+    qrlb_height: TQRLabel;
+    qrlb_nkg: TQRLabel;
+    qrlb_skg: TQRLabel;
+    qrlb_ibw: TQRLabel;
+    qrlb_bmi: TQRLabel;
+    qrmm_request: TQRMemo;
+    QRSubDetail2: TQRSubDetail;
+    QRMemo2: TQRMemo;
+    QRSubDetail3: TQRSubDetail;
+    QRMemo3: TQRMemo;
+    GroupHeaderBand1: TQRBand;
+    GroupHeaderBand2: TQRBand;
+    GroupHeaderBand3: TQRBand;
+    QRLabel12: TQRLabel;
+    QRLabel13: TQRLabel;
+    QRLabel14: TQRLabel;
+    QRSysData1: TQRSysData;
+    QRLabel16: TQRLabel;
+    qrlb_reqdate: TQRLabel;
+    QRBand2: TQRBand;
+    QRLabel15: TQRLabel;
+    qrlb_state1: TQRLabel;
+    QRLabel25: TQRLabel;
+    qrlb_state4: TQRLabel;
+    QRLabel26: TQRLabel;
+    qrlb_state7: TQRLabel;
+    QRLabel27: TQRLabel;
+    qrlb_state2: TQRLabel;
+    QRLabel30: TQRLabel;
+    qrlb_state5: TQRLabel;
+    QRLabel28: TQRLabel;
+    qrlb_state8: TQRLabel;
+    QRLabel32: TQRLabel;
+    qrlb_state3: TQRLabel;
+    QRLabel31: TQRLabel;
+    qrlb_state6: TQRLabel;
+    QRLabel29: TQRLabel;
+    qrlb_state9: TQRLabel;
+    QRLabel33: TQRLabel;
+    qrlb_req1: TQRLabel;
+    qrlb_req2: TQRLabel;
+    qrlb_req3: TQRLabel;
+    qrlb_req4: TQRLabel;
+    qrlb_req5: TQRLabel;
+    qrlb_req6: TQRLabel;
+    QRLabel17: TQRLabel;
+    QRLabel18: TQRLabel;
+    QRLabel20: TQRLabel;
+    QRLabel21: TQRLabel;
+    QRLabel22: TQRLabel;
+    QRLabel23: TQRLabel;
+    QRLabel24: TQRLabel;
+    QRLabel34: TQRLabel;
+    qrlb_wdweek: TQRLabel;
+    QRLabel36: TQRLabel;
+    qrlb_wdpercent: TQRLabel;
+    QRLabel38: TQRLabel;
+    QRLabel39: TQRLabel;
+    QRLabel40: TQRLabel;
+    qrlb_nweight: TQRLabel;
+    QRLabel43: TQRLabel;
+    qrlb_sweight: TQRLabel;
+    QRLabel45: TQRLabel;
+    QRLabel46: TQRLabel;
+    QRLabel47: TQRLabel;
+    qrlb_wdweek1: TQRLabel;
+    qrlb_wdweek2: TQRLabel;
+    qrlb_wdweek3: TQRLabel;
+    qrlb_wdweek4: TQRLabel;
+    QRLabel52: TQRLabel;
+    QRLabel53: TQRLabel;
+    QRLabel54: TQRLabel;
+    QRLabel55: TQRLabel;
+    QRLabel56: TQRLabel;
+    qrlb_albumin: TQRLabel;
+    QRLabel58: TQRLabel;
+    QRLabel59: TQRLabel;
+    QRLabel60: TQRLabel;
+    QRLabel61: TQRLabel;
+    QRLabel62: TQRLabel;
+    qrlb_eatp1: TQRLabel;
+    qrlb_eatp2: TQRLabel;
+    qrlb_eatp3: TQRLabel;
+    qrlb_eatp4: TQRLabel;
+    QRLabel67: TQRLabel;
+    QRLabel68: TQRLabel;
+    qrlb_eatp5: TQRLabel;
+    qrlb_eatp6: TQRLabel;
+    QRLabel71: TQRLabel;
+    QRLabel72: TQRLabel;
+    QRLabel73: TQRLabel;
+    QRLabel74: TQRLabel;
+    QRLabel75: TQRLabel;
+    QRShape1: TQRShape;
+    QRShape2: TQRShape;
+    QRShape3: TQRShape;
+    QRShape4: TQRShape;
+    QRShape6: TQRShape;
+    QRShape7: TQRShape;
+    QRShape8: TQRShape;
+    QRShape9: TQRShape;
+    QRShape10: TQRShape;
+    QRShape12: TQRShape;
+    QRShape13: TQRShape;
+    qrlb_wdp1: TQRLabel;
+    QRLabel77: TQRLabel;
+    qrlb_wdp2: TQRLabel;
+    QRLabel79: TQRLabel;
+    qrlb_wdp3: TQRLabel;
+    QRLabel81: TQRLabel;
+    qrlb_wdp4: TQRLabel;
+    QRLabel83: TQRLabel;
+    qrlb_albumin1: TQRLabel;
+    QRLabel85: TQRLabel;
+    qrlb_albumin2: TQRLabel;
+    QRLabel87: TQRLabel;
+    qrlb_albumin3: TQRLabel;
+    QRLabel89: TQRLabel;
+    qrlb_albumin4: TQRLabel;
+    QRLabel91: TQRLabel;
+    qrlb_take1: TQRLabel;
+    QRLabel93: TQRLabel;
+    qrlb_take2: TQRLabel;
+    QRLabel95: TQRLabel;
+    qrlb_take3: TQRLabel;
+    QRLabel97: TQRLabel;
+    qrlb_take4: TQRLabel;
+    QRLabel99: TQRLabel;
+    qrlb_mealp1: TQRLabel;
+    QRLabel101: TQRLabel;
+    qrlb_mealp2: TQRLabel;
+    QRLabel103: TQRLabel;
+    qrlb_mealp3: TQRLabel;
+    QRLabel105: TQRLabel;
+    qrlb_mealp4: TQRLabel;
+    QRLabel107: TQRLabel;
+    qrlb_bu1: TQRLabel;
+    QRLabel109: TQRLabel;
+    qrlb_bu2: TQRLabel;
+    qrlb_bu3: TQRLabel;
+    qrlb_bu4: TQRLabel;
+    qrlb_bok1: TQRLabel;
+    QRLabel117: TQRLabel;
+    qrlb_bok2: TQRLabel;
+    qrlb_bok3: TQRLabel;
+    qrlb_bok4: TQRLabel;
+    qrlb_pi1: TQRLabel;
+    QRLabel125: TQRLabel;
+    qrlb_pi2: TQRLabel;
+    qrlb_pi3: TQRLabel;
+    qrlb_pi4: TQRLabel;
+    qrlb_gum1: TQRLabel;
+    QRLabel133: TQRLabel;
+    qrlb_gum2: TQRLabel;
+    qrlb_gum3: TQRLabel;
+    qrlb_gum4: TQRLabel;
+    QRLabel111: TQRLabel;
+    QRLabel113: TQRLabel;
+    QRLabel115: TQRLabel;
+    QRLabel119: TQRLabel;
+    QRLabel121: TQRLabel;
+    QRLabel123: TQRLabel;
+    QRLabel127: TQRLabel;
+    QRLabel129: TQRLabel;
+    QRLabel131: TQRLabel;
+    QRLabel135: TQRLabel;
+    QRLabel137: TQRLabel;
+    QRLabel139: TQRLabel;
+    QRLabel140: TQRLabel;
+    QRLabel141: TQRLabel;
+    qrlb_qcal: TQRLabel;
+    QRLabel143: TQRLabel;
+    qrlb_pg: TQRLabel;
+    QRLabel145: TQRLabel;
+    qrlb_water: TQRLabel;
+    QRLabel35: TQRLabel;
+    qrlb_wrtfeed: TQRLabel;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SQN200F7_P1: TSQN200F7_P1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TSQN200F7_P1.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+   Action := cafree;
+   SQN200F7_P1 := nil;
+end;
+
+end.

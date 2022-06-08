@@ -1,0 +1,98 @@
+package uniHISPack;
+
+{$R *.res}
+{$R 'ADROCK\Ad3dcal.dcr'}
+{$R 'AssOutLook\AsOutlook.dcr'}
+{$R 'BIANCO\Bianco_Panel.dcr'}
+{$R 'Async\CommInt.dcr'}
+{$R 'COM\ComDrv32.dcr'}
+{$R 'FlatStyle\TFlatRegister.dcr'}
+{$R 'TuxDataSet\TuxDts.dcr'}
+{$R 'DdeWinFaxConv\DdeWinFaxConv.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'uniHIS Components Package'}
+{$IMPLICITBUILD OFF}
+{$DEFINE DFS_COMPILER_5_UP}
+
+requires
+  rtl,
+  vcl,
+  VclSmp,
+  designide,
+  dbrtl;
+
+contains
+  AComCal in 'ACalendar\AComCal.pas' {ACalender: TFrame},
+  Addate in 'ADROCK\ADDATE.PAS',
+  Ad3dcal in 'ADROCK\Ad3dcal.pas',
+  Excels in 'AdvExcel\Excels.pas',
+  UltraGrid in 'UltraGrid\UltraGrid.pas',
+  NumEdit in 'NumEdit\NumEdit.pas',
+  Serial in 'Serial\Serial.pas',
+  AsSpeedButton in 'AssOutLook\AsSpeedButton.pas',
+  AsOutlook in 'AssOutLook\AsOutlook.pas',
+  Bianco_Panel in 'BIANCO\Bianco_Panel.pas',
+  CommObjs in 'Async\CommObjs.pas',
+  CommInt in 'Async\CommInt.pas',
+  ComDrv32 in 'COM\ComDrv32.pas',
+  TFlatTabControlUnit in 'FlatStyle\TFlatTabControlUnit.pas',
+  FlatGraphics in 'FlatStyle\FlatGraphics.pas',
+  FlatUtilitys in 'FlatStyle\FlatUtilitys.pas',
+  HSLUtils in 'FlatStyle\HSLUtils.pas',
+  TFlatAnimationUnit in 'FlatStyle\TFlatAnimationUnit.pas',
+  TFlatAnimWndUnit in 'FlatStyle\TFlatAnimWndUnit.pas',
+  TFlatButtonUnit in 'FlatStyle\TFlatButtonUnit.pas',
+  TFlatCheckBoxUnit in 'FlatStyle\TFlatCheckBoxUnit.pas',
+  TFlatCheckListBoxUnit in 'FlatStyle\TFlatCheckListBoxUnit.pas',
+  TFlatColorComboBoxUnit in 'FlatStyle\TFlatColorComboBoxUnit.pas',
+  TFlatComboBoxUnit in 'FlatStyle\TFlatComboBoxUnit.pas',
+  TFlatEditUnit in 'FlatStyle\TFlatEditUnit.pas',
+  TFlatGaugeUnit in 'FlatStyle\TFlatGaugeUnit.pas',
+  TFlatGroupBoxUnit in 'FlatStyle\TFlatGroupBoxUnit.pas',
+  TFlatHintUnit in 'FlatStyle\TFlatHintUnit.pas',
+  TFlatListBoxUnit in 'FlatStyle\TFlatListBoxUnit.pas',
+  TFlatMaskEditUnit in 'FlatStyle\TFlatMaskEditUnit.pas',
+  TFlatMemoUnit in 'FlatStyle\TFlatMemoUnit.pas',
+  TFlatPanelUnit in 'FlatStyle\TFlatPanelUnit.pas',
+  TFlatProgressBarUnit in 'FlatStyle\TFlatProgressBarUnit.pas',
+  TFlatRadioButtonUnit in 'FlatStyle\TFlatRadioButtonUnit.pas',
+  TFlatRegister in 'FlatStyle\TFlatRegister.pas',
+  TFlatRichEditUnit in 'FlatStyle\TFlatRichEditUnit.pas',
+  TFlatSoundUnit in 'FlatStyle\TFlatSoundUnit.pas',
+  TFlatSpeedButtonUnit in 'FlatStyle\TFlatSpeedButtonUnit.pas',
+  TFlatSpinButtonUnit in 'FlatStyle\TFlatSpinButtonUnit.pas',
+  TFlatSpinEditUnit in 'FlatStyle\TFlatSpinEditUnit.pas',
+  TFlatSplitterUnit in 'FlatStyle\TFlatSplitterUnit.pas',
+  mgd in 'MGD\mgd.pas',
+  TuxDts in 'TuxDataSet\TuxDts.pas',
+  Fml in 'Tmax\FML.PAS',
+  Atmi in 'Tmax\ATMI.PAS',
+  Fml32 in 'Tmax\FML32.PAS',
+  Ustrgrid in 'UStrGrid\USTRGRID.PAS',
+  DdeWinFaxConv in 'DdeWinFaxConv\DdeWinFaxConv.pas',
+  TransBtn in 'TransButton\TransBtn.pas',
+  GIFImage in 'GifImage\GifImage.pas',
+  Barcode in 'fbarcode\Barcode.pas',
+  bcchksum in 'fbarcode\bcchksum.pas';
+
+end.

@@ -1,0 +1,684 @@
+***************************************************
+TMS Component pack v2.2 : update May 1, 2002
+***************************************************
+
+New : TUniHTMLabel, TUniHTMListbox, TUniHTMLCombobox
+----------------------------------------------------
+- label, listbox & combobox with support for Unicode HTML formatted text
+
+Update : TAdvStringGrid v2.2.0.8
+--------------------------------
+- Corrected image drawing issue in floating footer
+- Changed behaviour for ssNumeric sort style when used with non-numeric data
+- Improved AutoSizeCells
+- Disjunct row selection & sort improvement
+- Improved ActiveCellShow behaviour
+- Improved All cell and Column selection
+
+Update : TCABFile v1.4
+----------------------
+- Added methods to automatically add full directories to the CAB file
+
+***************************************************
+TMS Component pack v2.2 : update April 17, 2002
+***************************************************
+
+Update : TAdvStringGrid v2.2.0.7
+--------------------------------
+- Save/Load nodes with LoadFromBinFile / SaveToBinFile issue solved
+- Improved handling of Alt-Dn for combobox dropdown activation with keyboard
+- Improved vertical alignment handling for printing
+- Improved checkbox & image alignment handling for printing
+- Improved BiDi support for inplace editing
+- Fix for selected rich text painting
+- Improved printsettings dialog handling
+
+***************************************************
+TMS Component pack v2.2 : update April 10, 2002
+***************************************************
+
+Update : TAdvColumnGrid v2.2
+----------------------------
+- Added SaveColumnPositions / LoadColumnPosition methods
+- Added CreateColumns function to create descendent extended grid column properties
+- Added C++Builder 6 support
+- Inherits all new TAdvStringGrid features and improvements
+
+Update : TAdvStringGrid v2.2.0.6
+--------------------------------
+- Fixed IsXMergedCell, IsYMergedCell function calls
+- Fixed border drawing with styles Flat and Look glTmS, glSoft combined
+- Fixed CopyToClipboard / CutToClipboard with disjunct row selection
+- Added TMSGradientFrom / TMSGradientTo public properties for glTMS look gradient control
+
+Update : THTMLCheckBox 
+----------------------
+- Drawing issue solved with Windows XP visual style
+
+***************************************************
+TMS Component pack v2.2 : update April 2, 2002
+***************************************************
+
+Update : TAdvStringGrid v2.2.0.5
+--------------------------------
+- New version numbering for easier version identification
+- HideUnSelectedRows, RemoveUnSelectedRows method added
+- Significantly improved performance with LoadFromCSV
+- SplitAllCells method added
+- XYOffset public property for text/RTF/HTML position control
+- RangeSelectAndEdit property added in MouseActions allows range selection & editing simultanously
+- KeepHorizScroll property added to prevent scrollback with row selection
+- Improved handling of empty cells with date inplace editor & sorting
+- Column stretch on selectable column
+- Inplace or popup memo with scrollbar support
+- Improved & faster display with nodes
+- GetParentRow, InsertChildRow, RemoveChildRow methods added to add rows in grid with nodes
+- PrintSelectedRows, PrintPreviewSelectedRows
+- Preview dialog with PrintSelectedRows property
+- Translatable preview & find dialog 
+- Printer setup dialog capability from preview dialog
+- Improved OLE drag&drop with disjunct row drag&drop support
+- Hide comment indicator with clNone color
+- Improved alignment & autosizing with rotated text
+- OnResize event added
+- Cell level persistent color, fontcolor, fontstyle, fontsize, fontname, alignment properties
+- Improved virtual cell handling with filtering & hiding rows
+- Improved floating footer handling
+- Improved CSV file delimiter guess
+- glClassic and glTMS looks added
+- ActiveCellColor property added
+- SelectionResizer property added
+- Improved smart clipboard functionality
+- SaveToBinFile, LoadFromBinFile methods for saving full grid cell info
+- SaveToBinStream, LoadFromBinStream methods 
+- Full formatted cell clipboard support including images, checkbox, buttons, colors, comments ...
+- Improved virtual cell handling
+- Public properties MinRowHeight, MaxRowHeight, MinColWidth, MaxColWidth for AutoSizeRow,AutoSizeCol methods
+- NoAutoSizeRows property added under PrintSettings
+- New sample applications
+- C++Builder 6 support
+- Improved printing support
+- PrintSettings.PageNumberOffset & PrintSettings.MaxPagesOffset properties added
+- OnCustomCellDraw & OnCustomCellSize events added and demo 52 for custom drawing & printing support through these new events
+- In DragDropSettings, OleCopyAlways and OleColumnDragDrop properties added
+- Background bitmap style bcAll added
+- Windows XP shaded hint support
+- Built-in HTML formatted cell comment / hints support
+- Improved BIDI mode support
+- Capability to search in hidden cells added
+
+
+***************************************************
+TMS Component pack v2.1 : update March 19, 2002
+***************************************************
+
+Update : TPlannerCalendar v1.2
+------------------------------
+- Improved support for C++Builder 6
+
+New : TWebConnect v1.0
+----------------------
+- Component to connect to/disconnect from the Internet and check
+  the internet connection state
+
+Update : TWebCopy v1.4
+----------------------
+- Added support to copy only newer files
+
+New : THotSpotImage v1.0
+------------------------
+- Hotspot image component for Delphi 5,6 & C++Builder 5,6
+
+***************************************************
+TMS Component pack v2.1 : update February 22, 2002
+***************************************************
+
+New : Support for C++Builder 6
+
+***************************************************
+TMS Component pack v2.1 : update January 31, 2002
+***************************************************
+
+NEw : TDBAdvNavigator v1.0
+--------------------------
+- Extended DBNavigator component with GlyFX (http://www.glyfx.com) glyphs. 
+- Office XP style buttons with various colors for various states, included automatic glyph shade generation
+- Normal, hot and disabled glyphs used
+
+NEw : TAdvToolButton v1.0
+-------------------------
+- Speedbutton in Office XP style
+- Normal, hot and down color
+- Normal, hot, down and disabled glyph support (Not all state glyphs required)
+- Automatic Office XP-like shade generation for hot state
+- Works with free and full GlyFX (http://www.glyfx.com) glyph sets that provide XP style normal, hot & disabled glyphs
+
+UPDATE : TAdvPanel & TAdvPanelGroup v1.3
+----------------------------------------
+- New : Windows XP visual styles support
+- New : Various automatic caption shading styles
+- New : TAdvPanelGroup horizontal or vertical scrollbars 
+- Improved : enhanced caption text drawing control
+- Improved : background wallpaper drawing
+
+NEW : TAdvDirectoryEdit & TAdvFileNameEdit v1.0
+-----------------------------------------------
+- New : TAdvDirectoryEdit : edit control with directory picker 
+- New : TAdvFileNameEdit : edit control with filename picker
+
+UPDATE : TAdvEditBtn & TDBAdvEditBtn v1.2
+-----------------------------------------
+- New : Windows XP visual styles support
+- New : always enable attached label
+- New : alpha numeric edit mode
+- New : embedded button width control
+
+UPDATE : TAdvEdit & TDBAdvEdit v2.1
+-----------------------------------
+- New : always enable attached label
+- New : alpha numeric edit mode
+- Improved : transparency & focus color modes
+- Improved : password edit mode
+
+
+***************************************************
+TMS Component pack v2.1 : update January 14, 2002
+***************************************************
+
+UPDATE : InspectorBar controls v1.01
+------------------------------------
+- Maintenance update for InspectorBar controls
+- GlyFX DBNavigator style added in DBInspectorBar
+- Inspector sample edit links added
+
+
+***************************************************
+TMS Component pack v2.1 : update December 30, 2001
+***************************************************
+
+NEW : InspectorBar controls v1.0
+--------------------------------
+- TInspectorBar, TINIInspectorBar, TDBInspectorBar, TRTTIInspectorBar
+- Standard Outlook large and small icon size panels
+- Can accept controls in InspectorPanels
+- Build in support for checkboxes, edits, comboboxes, spin editors, datetime pickers, font editing, color picker ..
+- Custom inplace editors support
+- Visual Studio .NET toolbox style
+- Optional build-in DBNavigator in DBInspectorBar
+- Background textures, gradients, images in items
+- Various shading styles for panel captions, including XP button style & bitmap effects
+- Various hover effects
+- Full visual styles support on Windows XP
+
+UPDATE : TAdvColumnGrid v2.02
+-----------------------------
+- New : filter dropdown per column with friendlyname & filter specification
+- New : popup menu per column
+- New : min. + max. column size settings for AutoSize & runtime column sizing
+- Improved : design time column property control
+- Inherits all TAdvStringGrid v2.01 features 
+
+UPDATE : TWallPaper
+-------------------
+- Improved : tiled drawing
+
+UPDATE : TAdvImage
+------------------
+- Improved : tiled drawing
+
+
+***************************************************
+TMS Component pack v2.1 : update December 7, 2001
+***************************************************
+
+UPDATE : TAdvStringGrid v2.01
+-----------------------------
+- New : autocalculating fixed floating footer (see demo app 49)
+- New : disjunt cell selection (see demo app 48)
+- New : capability to generate XHTML compliant output
+- New : CommentColor property to set color for comment indicator
+- New : ClearTextOnly property to clear text only, not cell objects in all Clear* methods
+- Improved : Windows XP visual style handling
+- Various smaller improvements
+
+UPDATE : TPlanner v1.5 + TDBPlanner v1.3
+----------------------------------------
+- New : multimonth mode, extendable to year mode
+- New : positiongroups, grouping of positions
+- New : printing on multiple pages
+- New : bumped trackbar
+- New : different cursor per item
+- New : Windows XP visual style use
+- New : blended selection color for inactive cells
+- New : position zooming, position width control
+- New : background bitmap per position
+- New : limited selections per position
+- New : input forms in planner items
+- New : item cloning
+- New : controllable scroll delay
+- New : car repair center planning demo
+- New : multi resource / day view
+- New : multi day / resource view
+- New : auto header fill in day mode
+- New : tennis court reservation demo
+- Various smaller improvements
+
+
+***************************************************
+TMS Component pack v2.0 : update December 1, 2001
+***************************************************
+
+UPDATE : THTMLButtons v1.3
+--------------------------
+- New : support for Windows XP visual styles (real visual style support on Windows XP, emulated on other Windows versions)
+- New : HTMLCheckGroup component
+
+UPDATE : THTMLTreeview v1.1
+---------------------------
+
+- New : added capability to show checkboxes and radiobuttons
+- New : radiobuttons and checkboxes can have various looks,
+        incuding standard, flat, Borland and Windows XP visual styles looks
+
+NEW : THTMLPopup v1.0
+---------------------
+- New : A MSN Messenger like HTML formatted popup box
+
+
+***************************************************
+TMS Component pack v2.0 : update November 2, 2001
+***************************************************
+
+UPDATE : TAdvStringGrid v2.0
+----------------------------
+- New : Merged cells, merged cell printing, merged cell HTML export
+- New : BitButton inplace editor
+- New : Inplace control look settings for classic, flat, glyph, Borland look, TMS look, emulated WinXP and real WinXP themed look
+- New : Virtual cell text
+- New : Sort independent cell row access
+- New : Load from MDB files
+- New : Floating fixed footer for last row, cell preview or custom preview display
+- New : Integral height control
+- New : New precise border control allowing each side of the cell to have a different border color
+- New : Vertical alignment control per cell
+- New : Various grouped properties for easier design time access
+- New : Inplace combobox, button and spin edit control using Windows XP visual styles
+- New : Sort control on fixed row of choice
+- New : Improved grouping display with tree and possibility for merged group headerrows
+- Numerous smaller improvements and new more precise behaviour control
+
+
+UPDATE : TTodoList v1.1 & TDBTodoList v1.1
+------------------------------------------
+- New : column reorganisation with drag & drop
+- New : SaveToFile, SaveToStream, LoadFromFile, LoadFromStream, SaveColumns, LoadColumns
+- New : Project field
+- New : Auto hints for large text, auto edit advance, numeric or graphic completion display
+
+
+UPDATE : TPlannerCalendar v1.2 TPlannerDatePicker v1.2 & TPlannerCalendarGroup v1.0
+-----------------------------------------------------------------------------------
+- New : highly configurable multi-month calendar
+- New : selectable color and shape for each event in the calendar
+
+
+UPDATE : TWebData v1.0 & TWebImage v1.1
+---------------------------------------
+- New : animated GIF file support added for TWebImage
+- New : webpage scanner demo with TWebData & TWebImage
+- New : image ref & hyperlink list added in TWebData
+- New : web page caching for multiple information extraction in TWebData
+
+***************************************************
+TMS Component pack v1.9 : update September 16, 2001
+***************************************************
+
+UPDATE : TPlanner v1.4 TDBPlanner v1.2
+--------------------------------------
+- New : flashing items : new properties to control appearance of flashing items : FlashColor, FlashFontColor, EnableFlashing,Flashing added
+- New : UniformBkg property added in PlannerItem
+- New : DoExport public property added for control which items to export
+- New : Methods ExportItems, ExportItem, ExportPosition, ExportLayer added to mark items for export
+- New : Inter component drag & drop support of planner items with new property DragItem and events : OnDragStart, OnDragEnd, OnItemDrag
+- New : MarkInItem, MarkInItems, MarkInPosition methods added to underline text in planner items
+- New : HilightInItem, HilightInItems, HilightInPosition added to highlight text in planner items
+- New : ScrollSmooth property added to control scroll during item moves
+- New : WheelDelta property added to control scrolling with mouse wheel
+- New : OnItemAlarm event for custom alarm handling
+- New : sample application demonstrating TDBTodoList and TDBPlanner interoperability with drag and drop
+- Various smaller improvements & fixes in TPlanner
+- Various optimizations in TDBPlanner
+- New : extensive series of add-on components for seamless interoperability with other office appliances
+  
+NEW : TTodoList v1.0 TDBTodoList v1.0
+-------------------------------------
+
+- New : Ready to use TodoList and DB-aware TodoList for PIM applications
+- Features : subject, completion, priority, status, resource, notes, creation, due, completion date editing
+- Sorting by different todo item properties
+- Preview view of todo item notes.
+- Extensive control over appearance of various items
+- DB-aware version included that ties to selectable fields of choice of a database table
+
+UPDATE : TWebUpdate v1.4
+------------------------
+
+- New : interfaces with the ASTA Binary patch technology to use file difference based automatic updates of application executables or application files
+- New : TAstaPatchUtility component to integrate the ASTA Binary patch technology seamless with TWebUpdate
+- New : 2 sample applications that show the use of ASTA binary patch files to update the running application and to update an application database
+- Improved : handling of multilevel directory structured updates, "what's new" file handling, CRC32 file checksum handling
+
+
+
+************************************************
+TMS Component pack v1.9 : update August 31, 2001
+************************************************
+
+UPDATE & NEW : TAdvPanel v1.0 TAdvPanelGroup v1.0
+-------------------------------------------------
+- New : caption close, min, max button glyphs
+- New : caption collapsed and non-collapsed color settings
+- New : move cursor over caption when panel can be moved
+- New : PictureContainer support
+- New : TAdvPanelGroup container for TAdvPanels
+- New : fixed height, width, left side, top side moving & sizing
+- Improved : drawing 
+
+UPDATE : TThumbnailList v1.1
+----------------------------
+- New : support for multiple colums
+- New : support for multi select
+- New : highlighted or non highlighted selection 
+
+UPDATE : TAdvEdit v2.0, TDBAdvEdit v2.0
+---------------------------------------
+- New : EmptyText property to show gray text in control when control is empty
+- New : attached label transparency and focus font control
+- New : center alignment
+- New : automatic thousand separator insertion
+- New : Excel style decimal separator behaviour
+- New : Delphi 6 support
+- Improved : undo behaviour
+- Improved : focus color and focus font color behaviour
+- Improved : transparent style
+
+UPDATE & NEW : TAdvEditBtn v1.2, TDBAdvEditBtn v1.1, TUnitAdvEditBtn
+--------------------------------------------------------------------
+- Inherits all powerfull TAdvEdit features and adds embedded button in edit control
+- New : data-aware TDBAdvEditBtn added
+
+UPDATE : TAdvListView v1.54
+---------------------------
+- New : custom checkbox glyphs
+- New : text hilighting & marking
+- New : PictureContainer support
+- Improved : XLS import
+- Improved : URL handling
+- Improved : drawing 
+
+UPDATE : TWebUpdate v1.3
+------------------------
+- New : events returning EULA or What's New contents when available to allow customizing display
+- New : CRC32 based checksums of downloaded files
+- New : time based updates
+- New : {PF} directive to refer to the Program Files directory
+- New : OnSetAppParams event to allow dynamically setting application command line parameters for restart
+- New : HangUp method to force closing the internet connection
+- Improved : support for posting data to server for authentication & tracking
+- Update : UpdateBuilder application for building .INF files and uploading new versions
+
+UPDATE & NEW : TSectionListBox v1.9, TDBSectionListBox v1.0
+-----------------------------------------------------------
+- PictureContainer support added
+- Support for hilight & marking added
+- New : DB-aware sectionlistbox for viewing multiple datasource's multiple fields including graphics & memo fields in different sections
+
+NEW : Extended dialogs
+----------------------
+- Extensions for ShowMessage, ShowFmtMessage, MessageDlg, MessageDlgPos
+- Adds optionally a timeout capability for dialogs
+- Adds optionally a checkbox to query to show dialog again in future
+
+UPDATE : HTMLabel v1.6 & TDBHTMLabel v1.2
+-----------------------------------------
+- Hilight & marking support added
+
+UPDATE : TCABFile v1.3
+----------------------
+- Fixed problem w.r.t. decompression to root directories
+
+
+**********************************************
+TMS Component pack v1.8 : update July 31, 2001
+**********************************************
+
+NEW : TParamTreeview v1.0
+-------------------------
+- New : Treeview with parameters that can be edited with various inplace editors
+
+UPDATE : TAdvStringGrid v1.94
+-----------------------------
+- Improved : maintenance update with minor fixes
+
+UPDATE : TPlanner v1.3
+----------------------
+- Improved : maintenance update with minor fixes
+
+UPDATE : TDBPlanner v1.1
+------------------------
+- Improved : maintenance update with minor fixes
+
+
+**********************************************
+TMS Component pack v1.8 : update July 16, 2001
+**********************************************
+
+UPDATE : TPlanner v1.3
+----------------------
+
+- New : Non clipped items in day mode
+- New : Event & type for planner item custom editing
+- New : support for spell checkers, including Addict spell check support included.
+- New : Merged Planner headers
+- New : each item can have different alarm types
+- New : PrintTo, PrintSelectionTo, PrintRangeTo methods added
+- New : Time can start at any minute of the day, display unit can be any time in Day mode, making         other modes than 5,6,10,15,20,30,60 minute modes easy.
+- New : Editable all-day items
+- New : Automatic sizing of header depending on all-day items
+- New : per position control of active time period & background colors
+- New : PaintMarginTY, PaintMarginLX, PaintMarginBY, PaintMarginRX public properties added for more         precise paint control
+- Improved : faster item moving & sizing
+- Improved : printing
+- Improved : SideBar flat look
+- Improved : Latest HTML features, including PictureContainer support
+
+
+UPDATE : TDBPlanner v1.3
+------------------------
+
+- New : DBItemSource OnInsertItem, OnDeleteItem, OnUpdateItem events added
+- New : LocateFirstItem / LocateNextItem for full DB searches of items
+- New : OnResourceToPosition, OnPositionToResource events for repositioning of resources vs. 
+        positions
+- Improved clipboard support for DB-aware version
+
+
+UPDATE : TPlannerCalendar & TDBPlannerCalendar v1.1
+---------------------------------------------------
+
+- New : full week selection & selection of all identical days possible
+- New : event colors can be set different per event
+
+NEW : TPlannerDatePicker & TDBPlannerDatePicker v1.0
+----------------------------------------------------
+
+- New : dropdown calendar version of TPlannerCalendar
+
+
+NEW : TAddictPlannerCheck 
+-------------------------
+
+- Add-on component for TPlanner / TDBPlanner to perform spell checks and/or auto correct after   editing or programmatically with the Addict spell check component
+
+NEW : TEmailAlarm
+-----------------
+- Add-on interface component to send email alarms with the SakEMail components
+
+
+NEW : TOxygenSMSAlarm
+---------------------
+
+- Add-on interface component to send SMS alarms with the Oxygen software SMS component
+
+
+
+
+
+**********************************************
+TMS Component pack v1.8 : update July 6, 2001
+**********************************************
+
+UPDATE : TAdvStringGrid v1.94
+-----------------------------
+
+- New : Soft flat look. As we think you'll love this look, let us know if you'd
+        like us to make this the default look.
+- New : flat checkbox style
+- New : PictureContainer support to use JPEG, GIF, WMF, ICO, BMP
+        images without any additional library.
+- New : disabled checkbox display
+- New : support for enabling spell checking and auto correction with
+        Addict Spell Checker interface added.
+- New : ExcelStyleDecimalSeparator property added
+- New : EditLink and sample showing how to use a 
+        ColumnComboBox as inplace editor.
+- New : OnPrintPageDone event
+- New : OnGetCheckTrue, OnGetCheckFalse events to allow different 
+        checkbox True and False values in different cells.
+- New : OnFilterProgress event
+- New : Hints while column & row resizing
+- New : Sizing of fixed column over full grid height.
+- New : Error & HiLighting in cells, columns, rows, full grid
+- New : OnOleDropped event. 
+- Improved : Faster filtering
+- Improved : Latest HTML formatting features in cells, including paragraph 
+             indenting
+- New : sample application 34 : use Addict Spell Checker with TAdvStringGrid
+- New : sample application 35 : use TColumnComboBox with TAdvStringGrid
+
+
+**********************************************
+TMS Component pack v1.8 : update June 30, 2001
+**********************************************
+
+NEW : Help files
+----------------
+- New : integrated TMS Component Help files available for download
+        in registered users section of the website.
+
+UPDATE : TWebCopy v1.3
+----------------------
+- New : supports Http, FTP upload / download & network based file copy
+- New : extra options in progress dialog : estimated time left and % completed
+- New : ThreadExecAndWait method
+- New : OnErrorInfo event with additional error information
+- New : Delphi 6 support
+- Info : ASP script available to handle HTTP based uploads
+
+
+*********************************************
+TMS Component pack v1.8 : update May 30, 2001
+*********************************************
+
+UPDATE : HTMLHint v1.3
+----------------------
+- New : support for rounded hints
+- New : Ellipsis style drawing
+- New : PictureContainer support for adding images easily at design time without need to use resource files
+- New : support for GIF, JPG, ICO, BMP, WMF, animated GIF images
+- New : property to set hint color
+
+UPDATE : HTMListBox v1.6
+------------------------
+- New : Ellipsis style drawing
+- New : PictureContainer support for adding images easily at design time without need to use resource files
+- New : support for GIF, JPG, ICO, BMP, WMF, animated GIF images
+- New : extra special characters and nbsp; character support
+- Improved : faster HTML formatted drawing 
+
+UPDATE : HTMComboBox v1.4
+-------------------------
+- New : Ellipsis style drawing
+- New : PictureContainer support for adding images easily at design time without need to use resource files
+- New : flat style combobox and etched combobox dropdown button
+- New : support for GIF, JPG, ICO, BMP, WMF images
+- New : extra special characters and nbsp; character support
+- Improved : faster HTML formatted drawing  
+
+NEW : TPlannerCalendar v1.0 & TDBPlannerCalendar v1.0
+-----------------------------------------------------
+- Highly configurable month calendar that can be used separately or with 
+  the TMS TPlanner component.
+- Set all colors and fonts of days
+- Configurable start day of the week.
+- Show weeknumber and control on which day of year week counting should start
+- Keyboard support : up/down/left/right arrows change day resp. +7/-7 -1/+1 day.
+- PgUp and PgDn changes month resp. +1/-1 month.
+- Enable or disable month selection
+- Customizable highlights and hints for special days
+- Multi selection or single selection
+- Wallpaper background
+- Min. & max selectable days
+- DB-aware version included for linking with TMS TDBPlanner
+
+UPDATE : THTMLButton controls v1.2 & TPictureContainer v1.0
+-----------------------------------------------------------
+- New : Ellipsis style single line drawing
+- New : Supports the new PictureContainer component to embed JPEG, GIF, BMP, ICO, WMF files into the application
+- New : Flat style .NET button look
+- New : THTMLRadioGroup
+- New : DB-aware checkbox & radiogroup
+- New : Checkbox & radiobutton horizontal & vertical alignment setting
+
+UPDATE : THTMLStaticText v1.2 & TPictureContainer v1.0
+------------------------------------------------------
+- New : Ellipsis style single line drawing
+- New : Supports the new PictureContainer component to embed JPEG, GIF, BMP, ICO, WMF files into the application
+- New : various autosizing styles : width only, height only, both sizes
+- New : support for GIF, animated GIF, JPEG, BMP, ICO, WMF files
+- New : alternate image support for when mouse is in image area
+- New : extra special characters support
+- New : &nbsp; non breaking space supported
+- Improved : faster drawing
+
+NEW : TDBPlanner v1.0 release
+-----------------------------
+- DB-aware version of TPlanner
+- Now includes TDBDaySource, TDBMonthSource & TDBPeriodSource for codeless interfacing to a database in day, month, dayperiod mode
+- Tested with (but not limited to) following databases : dBase (BDE), Paradox (BDE), DBIsam, Access (ADO), Apollo, Interbase, SQL server 2000, FlashFiler 
+
+UPDATE : TPlanner v1.2 
+----------------------
+- New : Find function added
+- New : Partial visible items in Month, DayPeriod & HalfDayPeriod mode
+- New : Plannermode clip property added for month,dayperiod and halfdayperiod modes
+- New : Display ScaleToFit property
+- New : Flat scrollbars with color & width control
+- New : OnPlannerKeyDown / OnPlannerKeyUp events
+- New : Item wordwrap property added
+- New : BidiMode & Constraints property
+- New : HTML support in Planner Caption
+- New : Added URLColor property
+- New : PlannerItem Attachement property and Attachement display in item
+- New : PlannerItem URL property added and URL display in item
+- New : AllowResize in planner header added to make positions resizable at runtime
+- New : Owner property in TPlannerItem
+- New : Background wallpaper in planner added
+- Improved and easier control of start/end times in day period and halfday period mode
+- Improved HTML export
+- Improved HTML drawing
+ 
+
+IMPROVED : TADVIMAGE 
+--------------------
+- Improved design time editor

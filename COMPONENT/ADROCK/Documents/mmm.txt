@@ -1,0 +1,45 @@
+File AD3DCAL.PAS:
+    procedure Today;
+{** Go to Today                                                           **}
+procedure TAdrock3dCalendar.Today;
+File ADDATE.PAS:
+    ReturnDaysInThePast := 'Today.'
+File ADDATECC.PAS:
+    fTodayButton            : TSpeedButton;
+    procedure ResetToTodaysDate;
+    procedure DrawTodayAndClearButtons;
+    function GetTodayButtonRect : TRect;
+File ADDATECN.PAS:
+  TAdrockCustomCalendarOption   = (opShowClearAndTodayButtons, opShowWeekNumbers, opShowRangeErrors, 
+  TAdrockWhichButtonDown        = (wbdNone, wbdToday, wbdClear, wbdPrevMonthButton, wbdNextMonthButton,
+File ADDATEDT.PAS:
+    Function          IsToday : Boolean;
+    Procedure         SetToday(Today : Boolean);
+    Property    Today     : Boolean      read IsToday      write SetToday      stored False;
+    Property    Today;
+    Property    Today;
+{** IsToday                                                                              **}
+Function TAdrockDateTimeCustomClass.IsToday : Boolean;
+       IsToday := (Trunc(Date) = Trunc(Now))
+       IsToday := FALSE;
+{** SetToday                                                                             **}
+Procedure TAdrockDateTimeCustomClass.SetToday;
+File ADDATEP.PAS:
+  if (OpShowClearAndTodayButtons in CustomCalendar.Options) then
+  DrawTodayAndClearButtons;
+procedure TAdrockCalendarPopup.DrawTodayAndClearButtons;
+  if not (OpShowClearAndTodayButtons  in CustomCalendar.Options) then
+  fRect := GetTodayButtonRect;
+  fRect := GetTodayButtonRect;
+  if (WhichbuttonDown <> wbdToday) then
+  x := ((fRect.Right-fRect.Left) Div 2) - (fBitmap.Canvas.TextWidth('Today') div 2);
+  fBitmap.Canvas.TextRect(fRect, fRect.Left+X, fRect.Top+2, 'Today');
+function TAdrockCalendarPopup.GetTodayButtonRect : TRect;
+       DrawTodayAndClearButtons;
+  DrawTodayAndClearButtons;
+procedure TAdrockCalendarPopup.ResetToTodaysDate;
+  if PointInRect(GetTodayButtonRect, X, Y) then
+        WhichButtonDown := wbdToday;
+  if (WhichButtonDown = wbdToday) or (WhichButtonDown = wbdClear) then
+      if (WhichButtonDown = wbdToday) then
+    ResetToTodaysDate;

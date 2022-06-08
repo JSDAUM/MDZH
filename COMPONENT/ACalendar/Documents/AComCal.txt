@@ -1,0 +1,104 @@
+AComCal을 Project에 Add시키시고...
+form에서 우측클릭하고 제일 위에 Add To Palette를 선택
+Component Name은 ACalender로 했음...
+확인하면 Component가 생김니다...
+
+
+// 버튼을 눌러 달력을 보일때
+procedure TAIA020F1.bbt_fromdateClick(Sender: TObject);
+begin
+   acald_date.SetDate(ed_fromdate.Text);
+   --> ed_fromdate 는 각자 알아서..물론 ed_fromdate 의 Exit Event에 CvtDate가 있어야 합니다.
+end;
+
+// 달력의 Click Event...정확히 달력의 이벤트에 줘야 함다..
+procedure TAIA020F1.acald_datecald_dateClick(Sender: TObject);
+begin
+  acald_date.cald_dateClick(Sender);
+  ed_fromdate.Text := DateToStr(acald_date.MyDate); --> ed_fromdate 는 각자 알아서..
+end;
+
+
+// 달력의 KeyDown Event
+procedure TAIA020F1.acald_datecald_dateKeyDown(Sender: TObject;
+  var Key: Word; Shift: TShiftState);
+begin
+  acald_date.cald_dateKeyDown(Sender, Key, Shift);
+   if ( Key = vk_Return ) then
+   begin
+      Key := 0;
+      acald_datecald_dateClick(Sender);
+   end;
+end;
+
+------------------------------------------------------------------------------------------------
+
+달력을 수정했습니다....
+
+진행중에 수정해서 죄송합니다....
+
+기존에 달력의 OnClick...OnKeyDown에 코딩하신 부분이 필요없어졌구요...
+
+달력을 보이는 버튼클릭 이벤트에
+
+   acald_date.SetDate(ed_thospfrdt.Text);    --> 기존에 있는 부분입니다...
+   acald_date.MyEdit := ed_thospfrdt;
+
+이런 식으로만 하시면 됩니다...둘이 순서가 바뀌면 안됩니다...
+다른 코딩은 전혀 필요없습니다...
+
+달력을 띄웠다가 날짜선택하기 싫을때 q를 누르면 그냥 빠져나옵니다...
+ESC는 Form Close 때문에....
+
+--------------------------------------------------------------------------------------------------
+
+AComCal을 수정했습니다.
+수정된 부분은 Focus를 잃으면 Visible을 False시키는 것입니다...
+
+그리고 버튼 클릭 이벤트에서 다음과 같이 코딩하시고 다른 코딩은 모두 삭제하십시오.
+이상하게 동작하시는 분들이 조금 있어서...죄송합니다..
+
+
+
+procedure TAIC020F4.bbt_orexecClick(Sender: TObject);
+var
+   out_top  : Integer;
+   out_left : Integer;
+begin
+   GetPoint(ed_orexec,out_top,out_left);
+   acald_date.Top    := out_top;
+   acald_date.Left   := out_left;
+   acald_date.SetDate(ed_orexec.Text);
+   acald_date.MyEdit := ed_orexec;
+end;
+
+--------------------------------------------------------------------------------------------------
+
+조금전에 보내드린 내용에
+
+procedure TAIC020F4.bbt_orexecClick(Sender: TObject);
+var
+   out_top  : Integer;
+   out_left : Integer;
+begin
+   GetPoint(ed_orexec,out_top,out_left);
+   acald_date.Top    := out_top;
+   acald_date.Left   := out_left;
+   acald_date.SetDate(ed_orexec.Text);
+   acald_date.MyEdit := ed_orexec;
+end;
+
+되어 있는데 이것은 달력을 Form에 바로 올린 경우 입니다.....
+Panel이나 기타 다른 Component에 올린 분은 
+
+procedure TAIC020F4.bbt_orexecClick(Sender: TObject);
+begin
+   acald_date.Top    := ....;
+   acald_date.Left   := ....;
+   acald_date.SetDate(ed_orexec.Text);
+   acald_date.MyEdit := ed_orexec;
+end;
+
+하셔야 합니다....
+
+--------------------------------------------------------------------------------------------------

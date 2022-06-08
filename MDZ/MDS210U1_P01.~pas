@@ -1,0 +1,176 @@
+unit MDS210U1_P01;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Qrctrls, QuickRpt, ExtCtrls;
+
+type
+  TMDS210F1_P01 = class(TForm)
+    qr_Search: TQuickRep;
+    QRBand2: TQRBand;
+    qrlb_Title: TQRLabel;
+    qrlb_HosName: TQRLabel;
+    QRShape2: TQRShape;
+    band_Detail: TQRBand;
+    QRSysData1: TQRSysData;
+    QRLabel2: TQRLabel;
+    qrlb_Opdate: TQRLabel;
+    QRLabel8: TQRLabel;
+    qrlb_Flag: TQRLabel;
+    QRSysData22: TQRSysData;
+    QRBand1: TQRBand;
+    QRLabel15: TQRLabel;
+    QRShape20: TQRShape;
+    QRShape23: TQRShape;
+    QRLabel22: TQRLabel;
+    QRShape27: TQRShape;
+    QRLabel25: TQRLabel;
+    QRShape28: TQRShape;
+    QRLabel26: TQRLabel;
+    QRShape30: TQRShape;
+    QRLabel28: TQRLabel;
+    QRShape31: TQRShape;
+    QRLabel29: TQRLabel;
+    QRShape1: TQRShape;
+    QRLabel1: TQRLabel;
+    QRShape4: TQRShape;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRShape5: TQRShape;
+    QRLabel5: TQRLabel;
+    QRShape7: TQRShape;
+    QRLabel6: TQRLabel;
+    QRShape8: TQRShape;
+    QRLabel7: TQRLabel;
+    QRShape9: TQRShape;
+    QRLabel9: TQRLabel;
+    qrlb_Data1: TQRLabel;
+    QRShape3: TQRShape;
+    QRShape6: TQRShape;
+    qrlb_Data2: TQRLabel;
+    QRShape10: TQRShape;
+    qrlb_Data3: TQRLabel;
+    QRShape11: TQRShape;
+    qrlb_Data4: TQRLabel;
+    QRShape13: TQRShape;
+    qrlb_Data6: TQRLabel;
+    QRShape14: TQRShape;
+    qrlb_Data7: TQRLabel;
+    QRShape15: TQRShape;
+    qrlb_Data8: TQRLabel;
+    QRShape16: TQRShape;
+    qrlb_Data9: TQRLabel;
+    qrlb_Data10: TQRLabel;
+    QRShape17: TQRShape;
+    qrlb_Data11: TQRLabel;
+    qrlb_Data12: TQRLabel;
+    QRShape18: TQRShape;
+    QRShape19: TQRShape;
+    qrlb_Data13: TQRLabel;
+    QRShape21: TQRShape;
+    qrlb_Data14: TQRLabel;
+    qrlb_Dept: TQRLabel;
+    QRLabel10: TQRLabel;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormDestroy(Sender: TObject);
+    procedure qr_SearchNeedData(Sender: TObject;
+      var MoreData: Boolean);
+    procedure FormCreate(Sender: TObject);
+    procedure qr_SearchBeforePrint(Sender: TCustomQuickRep;
+      var PrintReport: Boolean);
+  private
+    { Private declarations }
+  public
+    CurrentIndex, TempCnt : integer;
+    LastChk : string;
+    { Public declarations }
+  end;
+
+var
+  MDS210F1_P01: TMDS210F1_P01;
+
+implementation
+
+{$R *.DFM}
+
+procedure TMDS210F1_P01.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+   Action := caFree;
+end;
+
+procedure TMDS210F1_P01.FormDestroy(Sender: TObject);
+begin
+   MDS210F1_P01 := Nil;
+end;
+
+procedure TMDS210F1_P01.qr_SearchNeedData(Sender: TObject;
+  var MoreData: Boolean);
+begin
+    if LastChk = 'Y' then
+    begin
+       MoreData := False;
+       exit;
+    end;
+
+    if CurrentIndex = TempCnt - 1 then
+    begin
+       MoreData := True;
+       LastChk := 'Y';
+    end
+    else begin
+       MoreData := True;
+    end;
+
+    if (CurrentIndex < MDS210F1.ugd_List.Rowcount-1) then
+    begin
+      qrlb_Data1.Caption       := MDS210F1.ugd_List.cells[0, CurrentIndex+1];
+      qrlb_Data2.Caption       := MDS210F1.ugd_List.cells[1, CurrentIndex+1];
+      qrlb_Data3.Caption       := MDS210F1.ugd_List.cells[2, CurrentIndex+1];
+      qrlb_Data4.Caption       := MDS210F1.ugd_List.cells[3, CurrentIndex+1];
+//      qrlb_Data5.Caption       := MDS210F1.ugd_List.cells[4, CurrentIndex+1];
+      qrlb_Data6.Caption       := MDS210F1.ugd_List.cells[5, CurrentIndex+1];
+      qrlb_Data7.Caption       := MDS210F1.ugd_List.cells[6, CurrentIndex+1];
+      qrlb_Data8.Caption       := MDS210F1.ugd_List.cells[7, CurrentIndex+1];
+      qrlb_Data9.Caption       := MDS210F1.ugd_List.cells[8, CurrentIndex+1];
+      qrlb_Data10.Caption      := MDS210F1.ugd_List.cells[9, CurrentIndex+1];
+      qrlb_Data11.Caption      := MDS210F1.ugd_List.cells[10, CurrentIndex+1];
+      qrlb_Data12.Caption      := MDS210F1.ugd_List.cells[12, CurrentIndex+1];
+      qrlb_Data13.Caption      := MDS210F1.ugd_List.cells[13, CurrentIndex+1];
+      qrlb_Data14.Caption      := MDS210F1.ugd_List.cells[14, CurrentIndex+1];
+   end
+   else
+   begin
+      qrlb_Data1.Caption      := '';
+      qrlb_Data2.Caption      := '';
+      qrlb_Data3.Caption      := '';
+      qrlb_Data4.Caption      := '';
+//      qrlb_Data5.Caption      := '';
+      qrlb_Data6.Caption      := '';
+      qrlb_Data7.Caption      := '';
+      qrlb_Data8.Caption      := '';
+      qrlb_Data9.Caption       :=  '';
+      qrlb_Data10.Caption      :=  '';
+      qrlb_Data11.Caption      :=  '';
+      qrlb_Data12.Caption      :=  '';
+      qrlb_Data13.Caption      :=  '';
+      qrlb_Data14.Caption      :=  '';
+   end;
+   Inc(CurrentIndex);
+end;
+
+procedure TMDS210F1_P01.FormCreate(Sender: TObject);
+begin
+    CurrentIndex := 0;
+    LastChk := 'N';
+end;
+
+procedure TMDS210F1_P01.qr_SearchBeforePrint(Sender: TCustomQuickRep;
+  var PrintReport: Boolean);
+begin
+   qrlb_HosName.Caption := LocateTitle(G_LOCATE);
+end;
+
+end.

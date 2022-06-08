@@ -1,0 +1,41 @@
+uniHIS Components Pack (Verion - 2.0.0.0) 설치가이드
+
+0. "uniHISPACK.zip" 파일을 "C:\uniHIS\COMPONENT\uniHISPACK"에 압축을 푼다.
+
+1. "Delphi6"를 실행한다.
+
+2. "File/Open Project..." 메뉴를 선택한다.
+
+3. 파일형식을 "Delphi package (*.dpk)"로 변경한다.
+
+4. "C:\uniHIS\COMPONENT\uniHISPACK\uniHISPACK.dpk"를 연다.
+
+5. "Project/Build uniHISPack" 메뉴를 선택한다.
+
+6. "Package - uniHISPACK.dpk" 화면에서 "Install" 버튼을 누른다.
+
+7. "Tools/Environment Options..." 메뉴를 선택한다.
+
+8. "Library" 탭을 선택한다.
+
+9. "Directories" 그룹의 "Library path:"의 맨 오른쪽의 "..."버튼을 누른다.
+
+10. "Directories" 화면의 하단에 "Greyed items denote invalid path" 하단의
+    "..." 버튼을 누른다.
+
+11. "C:\uniHIS\COMPONENT\uniHISPACK\DCU" 디렉토리를 선택하고 "확인" 버튼을
+    누른다.
+
+12. "Add" 버튼을 눌러 디렉토리를 등록한다.
+
+13. "Directories" 화면의 하단에 "Greyed items denote invalid path" 하단의
+    "..." 버튼을 누른다.
+
+14. "C:\uniHIS\COMPONENT\uniHISPACK\RES" 디렉토리를 선택하고 "확인" 버튼을
+    누른다.
+
+15. "Add" 버튼을 눌러 디렉토리를 등록한다.
+
+16. "OK" 버튼을 눌러 등록을 완료한다.
+
+17. "File/Close All" 메뉴를 선택하여 설치를 완료한다.

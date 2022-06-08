@@ -1,0 +1,29 @@
+----  uniHISPACK 설치방법  확인요망!!--------------------------------
+
+QuickReport v3.6.2 설치  --> QR362ProfD6.exe
+
+fileserver E$ 서버 접속
+project_공유\component 폴더의 마지막에 올린 파일을 C:\UniHis 폴더로 복사
+델파이6 실행
+
+복사한 폴더에서
+
+tmspck\TMSD6.dpk
+CPort\DsgnCPort6.dpk
+uniHISPACK.dpk
+
+각각 열어서 Install
+
+설치가 성공적으로 끝나면 델파이 메뉴에서
+Tools-Environment Options 선택
+Library Tab의 Library path에 
+
+component\dcu
+component\res
+component\tmspck
+component\Cport
+component\ACalendar
+
+경로 추가
+
+---------------------------------------------------------------------

@@ -1,0 +1,16 @@
+출처 : www.torry.ru - VCL - Graphic - GIF
+홈페이지 : http://www.melander.dk/delphi/gifimage/. 
+저자 : Anders Melander
+
+델파이나 씨빌더의 TImage는 기본적으로 GIF type을 지원하지 않습니다.
+다음을 설치하면 TImage에서 GIF까지 load & save가 가능합니다.
+Runtime 뿐 아니라 Design Time에서도 가능합니다.
+gifimage.pas를 component로 등록하면 됩니다.
+TGIFImage라는 컴포넌트가 등록이 되는 것이 아니라
+TImage를 GIF를 지원하도록 내부적인 변경을 시킵니다.
+기존 application이 BMP나 JPG을 사용하여 용량이 클 경우
+본 라이브러리(컴포넌트라고 얘기하기 어렵군요)를 설치하고
+TImage의 Picture property만 변경하면
+쉽게 GIF로 수정할 수 있습니다.
+
+ps : TGIFImage는 컴포넌트가 아니라 TImgae를 수정하도록 하는 모듈입니다. 
